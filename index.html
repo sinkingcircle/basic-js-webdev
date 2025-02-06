@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+      }
+
+      #box {
+        position: relative;
+        width: 300px;
+        height: 300px;
+        color: black;
+        border: 10px solid;
+        padding: 20px;
+        background-color: red;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 15px;
+      }
+
+      #box h1 {
+        margin: 0 20px 20px 0;
+        font-size: 24px;
+      }
+
+      button {
+        padding: 10px 20px;
+        margin: 10px 0;
+        font-size: 16px;
+        cursor: pointer;
+        border: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+	border: solid 5px;
+	border-color: black;
+      }
+
+      button:hover {
+        background-color: rgba(0, 0, 0, 0.1);
+      }
+
+      p {
+        font-size: 18px;
+        font-weight: bold;
+        color: #333;
+      }
+
+#header{
+	color: red;
+	position:absolute;
+	top : 0px;
+}
+    </style>
+<h1 id = "header" > VIKRANTH JAGDISH - 23BCE1851</h1>
+  </head>
+  <body>
+
+    <div id="change">
+      <p>THIS CONTENT WILL BE CHANGED</p>
+      <button onclick="change()">Click me to change</button>
+    </div>
+    
+    <div id="box">
+      <h1>THIS IS A BOX</h1>
+      <button onclick="boxchange()">Click me to change box</button>
+      <button onclick="boxchangeog()">Click me to change box color to original</button>
+    </div>
+
+    <script>
+      function change() {
+        const change = document.getElementById("change");
+        change.innerText = "Hello! Welcome here the content is updated";
+      }
+
+      function boxchange() {
+        const og = document.getElementById("box");
+        og.style.backgroundColor = "blue";
+      }
+
+      function boxchangeog() {
+        const og = document.getElementById("box");
+        og.style.backgroundColor = "red";
+      }
+    </script>
+  </body>
+</html>
